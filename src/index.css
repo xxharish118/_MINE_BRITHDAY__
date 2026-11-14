@@ -1,0 +1,18 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+html { scroll-behavior: smooth; }
+body { background: #100609; color: #FFF1DC; font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; overflow-x: hidden; }
+.font-display { font-family: 'Cinzel', serif; }
+.font-script { font-family: 'Great Vibes', cursive; }
+.gold-text { background: linear-gradient(110deg,#a8841f,#f6e7a6,#D4AF37,#f6e7a6,#a8841f); background-size: 200% auto;
+  -webkit-background-clip: text; background-clip: text; color: transparent; animation: shine 6s linear infinite; }
+@keyframes shine { to { background-position: 200% center; } }
+.glass { background: rgba(57,0,13,.5); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(212,175,55,.38); box-shadow: 0 0 36px rgba(212,175,55,.08), inset 0 0 24px rgba(212,175,55,.05); }
+.gold-frame { background: linear-gradient(135deg,#f6e7a6,#D4AF37 40%,#8a6d17 70%,#D4AF37); padding: 6px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.55), 0 0 28px rgba(212,175,55,.2); }
+.bg-cinema { background: radial-gradient(ellipse at 50% 20%, #800020 0%, #39000D 45%, #100609 100%); }
+.petal { position: fixed; top: -8vh; border-radius: 80% 0 80% 0; background: radial-gradient(circle at 30% 30%,#d4153f,#800020);
+  opacity: .75; animation: fall linear infinite; pointer-events: none; z-index: 1; }
+.petal.dust { border-radius: 50%; background: #D4AF37; box-shadow: 0 0 8px #D4AF37; opacity: .6; }
+@keyframes fall { to { transform: translate3d(var(--dx), 112vh, 0) rotate(540deg); } }
+@media (prefers-reduced-motion: reduce) { .petal, .gold-text { animation: none; } }
